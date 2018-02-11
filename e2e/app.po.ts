@@ -12,4 +12,8 @@ export class AppPage {
   getCalculator() {
     return element(by.id('calculator'));
   }
+
+  getCalculatorScreen() {
+    return element(by.id('calculator-screen'));
+  }
 }

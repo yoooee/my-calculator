@@ -18,4 +18,9 @@ describe('my-calculator App', () => {
       expect(page.getCalculator().isDisplayed()).toBe(true);
     })
   });
+
+  it('should contain a display', () => {
+    page.navigateTo();
+    expect(page.getCalculatorScreen().isDisplayed()).toBe(true);
+  })
 });
