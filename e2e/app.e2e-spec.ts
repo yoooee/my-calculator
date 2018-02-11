@@ -11,4 +11,11 @@ describe('my-calculator App', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
+
+  describe('Calculator', () => {
+    it('should be visible on the page',() => {
+      page.navigateTo();
+      expect(page.getCalculator().isDisplayed()).toBe(true);
+    })
+  });
 });
