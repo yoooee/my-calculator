@@ -16,4 +16,16 @@ export class AppPage {
   getCalculatorScreen() {
     return element(by.id('calculator-screen'));
   }
+
+  getCalculatorNumberPad() {
+    return element(by.id('calculator-number-pad'));
+  }
+
+  getCalculatorNumberPadButtons() {
+    return element.all(by.css('.btn-number'));
+  }
+
+  getNumberOne() {
+    return element.all(by.css('.btn-number')).first();
+  }
 }

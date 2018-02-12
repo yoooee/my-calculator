@@ -9,10 +9,24 @@
 
   .calculator-screen {
     width:380px;
-    height:40px;
+    height:80px;
     border-radius: 5px;
     padding:10px;
     font-size:30px;
     text-align:right;
+  }
+
+  .calculator-number-pad{
+    .btn-number{
+      width:80px;
+      height:80px;
+      margin-top:10px;
+      margin-right:10px;
+      border:1px solid #333333;
+      border-radius:10px;
+      box-shadow:2px 2px 0 0 #bbbbbb;
+      font-size:30px;
+
+    }
   }
 }

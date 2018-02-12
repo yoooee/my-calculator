@@ -22,5 +22,38 @@ describe('my-calculator App', () => {
   it('should contain a display', () => {
     page.navigateTo();
     expect(page.getCalculatorScreen().isDisplayed()).toBe(true);
+  });
+
+  it('should contain a number pad', () => {
+    page.navigateTo();
+    expect(page.getCalculatorNumberPad().isDisplayed()).toBe(true);
+  });
+
+  describe('Number Pad', () => {
+    it('should contain 10 buttons', () => {
+
+      //Setup
+      let expected = 10;
+
+      //Execute
+      page.navigateTo();
+      let actual = page.getCalculatorNumberPadButtons().count();
+
+      //Verify
+      expect(actual).toBe(expected);
+
+    });
+
+    it('should contain buttons labeled 0-9', () => {
+      //Setup
+      let expected = '0';
+
+      //Execute
+      page.navigateTo();
+      let actual = page.getCalculatorNumberPadButtons().first().getText();
+
+      //Verify
+      expect(actual).toBe(expected);
+    })
   })
 });
